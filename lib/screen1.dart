@@ -23,6 +23,7 @@ class Screen1State extends State<Screen1> {
           children: <Widget>[
             Card1(),
             Card2(),
+            Card3(),
           ],
         ),
       ),
