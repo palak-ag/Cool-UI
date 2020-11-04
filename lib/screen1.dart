@@ -65,6 +65,7 @@ class Card1 extends StatelessWidget {
                     padding: EdgeInsets.all(10),
                     child: Text(
                       "ExpandablePanel",
+                      // ignore: deprecated_member_use
                       style: Theme.of(context).textTheme.body2,
                     )),
                 collapsed: Text(
@@ -130,6 +131,7 @@ class Card2 extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "Expandable",
+                    // ignore: deprecated_member_use
                     style: Theme.of(context).textTheme.body1,
                   ),
                 ],
@@ -157,6 +159,7 @@ class Card2 extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "Expandable",
+                    // ignore: deprecated_member_use
                     style: Theme.of(context).textTheme.body1,
                   ),
                   Text(
@@ -271,7 +274,7 @@ class Card3 extends StatelessWidget {
     buildList() {
       return Column(
         children: <Widget>[
-          for (var i in [1, 2, 3, 4]) buildItem("Item ${i}"),
+          for (var i in [1, 2, 3, 4]) buildItem("Item $i"),
         ],
       );
     }
@@ -313,6 +316,7 @@ class Card3 extends StatelessWidget {
                             "Items",
                             style: Theme.of(context)
                                 .textTheme
+                                // ignore: deprecated_member_use
                                 .body2
                                 .copyWith(color: Colors.white),
                           ),
