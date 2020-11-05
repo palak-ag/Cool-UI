@@ -2,14 +2,14 @@ import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
-class Screen1 extends StatefulWidget {
+class Screen2 extends StatefulWidget {
   @override
   State createState() {
-    return Screen1State();
+    return Screen2State();
   }
 }
 
-class Screen1State extends State<Screen1> {
+class Screen2State extends State<Screen2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,13 +65,16 @@ class Dropdown extends StatefulWidget {
 }
 
 class _DropdownState extends State<Dropdown> {
-  bool pump = false;
+  bool s1 = false;
+  bool s2 = true;
+  bool s3 = true;
+  bool s4 = true;
 
   @override
   Widget build(BuildContext context) {
     buildCollapsed2() {
       return Container(
-        color: Colors.lightGreen,
+        color: Colors.lightBlueAccent,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 7.0),
           child: Row(
@@ -142,116 +145,117 @@ class _DropdownState extends State<Dropdown> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 30.0, horizontal: 40),
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 100,
-                        width: 100,
-                        color: Colors.blue,
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(top: 8.0),
-                              child: Text(
-                                '32',
-                                style: TextStyle(fontSize: 30),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text(
-                                'ml/sec',
-                                style: TextStyle(fontSize: 25),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Text(
-                        "FLOW",
-                        style: TextStyle(
-                          fontSize: 20,
-                        ),
-                      )
-                    ],
-                  ),
+                Text(
+                  "DEVICE TYPE    :",
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 30.0, horizontal: 40),
-                  child: Column(
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            if (pump) {
-                              pump = false;
-                            } else {
-                              pump = true;
-                            }
-                          });
-                        },
-                        child: Container(
-                          child: Center(
-                            child: Text(
-                              !pump ? "ON" : "OFF",
-                              style: TextStyle(
-                                  fontSize: 30, fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                          height: 100,
-                          width: 100,
-                          color: Colors.blue,
-                        ),
-                      ),
-                      Text(
-                        "PUMP",
-                        style: TextStyle(
-                          fontSize: 20,
-                        ),
-                      )
-                    ],
-                  ),
-                )
+                Text(
+                  "  FLTS Agti-1",
+                  style: TextStyle(fontSize: 20),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Text(
+                  "SERIAL NO    :",
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "  FABCKG1V456",
+                  style: TextStyle(fontSize: 20),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Text(
+                  "BATTERY STATUS    :",
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "  58%",
+                  style: TextStyle(fontSize: 20),
+                ),
               ],
             ),
             Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 8.0, horizontal: 80),
+              padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  Container(
-                      height: 50,
-                      width: 100,
-                      color: pump ? Colors.blue : Colors.grey,
-                      child: Center(
-                        child: Text(
-                          "ON",
-                          style: TextStyle(
-                            fontSize: 20,
-                          ),
-                        ),
-                      )),
-                  Container(
-                      height: 50,
-                      width: 100,
-                      color: pump ? Colors.grey : Colors.blue,
-                      child: Center(
-                        child: Text(
-                          "OFF",
-                          style: TextStyle(
-                            fontSize: 20,
-                          ),
-                        ),
-                      ))
+                  Text('Sensor 1 '),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Container(
+                      height: 20,
+                      width: 30,
+                      color: s1 ? Colors.green : Colors.red,
+                    ),
+                  )
                 ],
               ),
-            )
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Text('Sensor 2 '),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Container(
+                      height: 20,
+                      width: 30,
+                      color: s2 ? Colors.green : Colors.red,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Text('Sensor 3 '),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Container(
+                      height: 20,
+                      width: 30,
+                      color: s3 ? Colors.green : Colors.red,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Text('Sensor 4 '),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Container(
+                      height: 20,
+                      width: 30,
+                      color: s4 ? Colors.green : Colors.red,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Row(
+              children: [
+                Text(
+                  " LOCATION    :",
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "  12.89302347,14.682343",
+                  style: TextStyle(fontSize: 18),
+                ),
+              ],
+            ),
           ],
         ),
       );

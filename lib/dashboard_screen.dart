@@ -1,4 +1,5 @@
 import 'package:abcd/screen1.dart';
+import 'package:abcd/screen2.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:deivao_drawer/deivao_drawer.dart';
 import 'package:deivao_drawer/drawer_controller.dart';
@@ -18,7 +19,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   bool navBarMode = false;
   static List<Widget> _screens = [
     Screen1(),
-    Center(child: Text("screen 2")),
+    Screen2(),
     Center(child: Text("screen 3")),
     Center(child: Text("screen 4"))
   ];
@@ -36,7 +37,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
             onPressed: drawerController.toggle,
           ),
           backgroundColor: Colors.deepOrange[300],
-          title: Text("Random"),
+          title: Text("HI USER"),
+          actions: [
+            IconButton(icon: Icon(Icons.notifications), onPressed: () {})
+          ],
         ),
         bottomNavigationBar: CurvedNavigationBar(
           key: _bottomNavigationKey,
@@ -44,9 +48,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
           height: 50.0,
           items: <Widget>[
             Icon(Icons.home, size: 30),
-            Icon(Icons.alarm, size: 30),
-            Icon(Icons.fastfood, size: 30),
-            Icon(Icons.games, size: 30),
+            Icon(Icons.devices, size: 30),
+            Icon(Icons.chat_bubble, size: 30),
+            Icon(Icons.settings, size: 30),
           ],
           color: Colors.deepOrange[300],
           buttonBackgroundColor: Colors.yellowAccent,
