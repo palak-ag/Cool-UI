@@ -1,5 +1,6 @@
 import 'package:abcd/screen1.dart';
 import 'package:abcd/screen2.dart';
+import 'package:abcd/screen3.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:deivao_drawer/deivao_drawer.dart';
 import 'package:deivao_drawer/drawer_controller.dart';
@@ -20,7 +21,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   static List<Widget> _screens = [
     Screen1(),
     Screen2(),
-    Center(child: Text("screen 3")),
+    Screen3(),
     Center(child: Text("screen 4"))
   ];
 
